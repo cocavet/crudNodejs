@@ -1,0 +1,33 @@
+extends layout
+
+block content
+	section.cont
+		.capsula
+			h1 Nueva Oferta de trabajo
+			form(role='form', action='/nuevaoferta', method='post')
+				ul
+					li
+						input(type='text', name='oferta[titulo]', placeholder='Titulo')
+					li
+						textarea(name='oferta[descripcion]', cols='30', rows='7', placeholder='Descripción')
+					li
+						select(name='oferta[categoria]', palceholder='categoria')
+							- for (var x = 1; x < 4; x++)
+								option= 'Categoria'+x
+							
+					li
+						input(type='text', name='oferta[fechaFin]', placeholder='Fecha finalización', id="fechafin")
+					li
+						input(type='text', name='oferta[empresa]', placeholder='Nombre del proyecto/empresa')
+					li
+						textarea(name='oferta[direccion]', cols='30', rows='7', placeholder='Dirección')
+					li
+						input(type='submit', class="btn default" ,value='crear')
+				input(type='hidden', name='oferta[fechaInit]', value="#{moment(Date.now()).format('MM/DD/YYYY')}")
+
+	script
+		$(function() {
+		$("#fechafin").datepicker();
+		});
+		
+

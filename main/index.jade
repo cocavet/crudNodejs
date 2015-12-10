@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    a(href='/nueva', class='nuevaOfertaBtn')
+    section.cont
+        .capsula
+            h1 Tus ofertas
+            ul
+                - if (docs.length)
+                each oferta in docs
+                    li.oferta
+                        h3 #{oferta.titulo}
+                        p #{oferta.descripcion}
+                        span.btns
+                            a.editarBtn.sprite(href='/#{oferta.id}/editar')
+                            form(method='post', action='/' + oferta.id)
+                                input(name='_method', value='DELETE', type='hidden')
+                                button.eliminarBtn.sprite(type='submit')
+
+                - else
+                    li.oferta
+                        h3 No tienes ninguna oferta de trabajo

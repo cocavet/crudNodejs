@@ -1,0 +1,393 @@
+
+
+// file: grid.sass
+// For: antai
+// version: v.1
+// Author: Pau Obrador
+
+
+
+// ------------------------------------------------------------------------
+//  01. ESTRUCTURA
+// ------------------------------------------------------------------------
+
+*
+	box-sizing: border-box
+
+*:focus
+	outline: none
+
+html, body
+	padding: 0px
+	margin: 0px 
+	font-family: $fontFamily
+	color: $color
+	font-size: $fontSizePercent
+
+#wrap
+	width: 100%
+	position: relative
+	float: left
+
+.cont
+	width: $gridWidth+px
+	position: relative
+	margin: 0 auto
+
+header
+	position: relative
+	height: $heightHeader+px
+
+main
+	width: $mainWidth+px
+	margin: 0 $medianil/2+px
+	float: left
+
+aside
+	width: $asideWidth+px
+	margin: 0 $medianil/2+px
+	float: left
+
+footer
+	width: 100%
+	background: $footerBg
+	padding: $padFooter
+
+// ------------------------------------------------------------------------
+//  02. TEXT
+// ------------------------------------------------------------------------
+
+// H's group
+
+h1
+	font-size: $fontH1Size+em
+	font-weight: $fontH1Weight
+	margin: $fontH1Margin
+	color: $fontH1Color
+	text-align: $fontH1Align
+h2
+	font-size: $fontH2Size+em
+	font-weight: $fontH2Weight
+	margin: $fontH2Margin
+	color: $fontH2Color
+	text-align: $fontH2Align
+h3
+	font-size: $fontH3Size+em
+	font-weight: $fontH3Weight
+	margin: $fontH3Margin
+	color: $fontH3Color
+	text-align: $fontH3Align
+h4
+	font-size: $fontH4Size+em
+	font-weight: $fontH4Weight
+	margin: $fontH4Margin
+	color: $fontH4Color
+	text-align: $fontH4Align
+
+// Text formats
+
+p
+	font-size: $fontSizeP+em
+	font-family: $secFontFamily
+
+blockquote
+	font-size: $fontSizeBq+em
+
+	&:after
+		content: '"'
+	&:before
+		content: ' "'
+
+span
+	display: block
+em
+	font-family: $secFontFamily
+	font-size: $fontSizeEm+em
+
+
+// ------------------------------------------------------------------------
+//  03. LINKS
+// ------------------------------------------------------------------------
+
+a
+	font-size: $fontSizeLinks
+	color: $colorLinks
+	text-decoration: none
+	&:hover
+		color: $colorLinksHover
+
+// ------------------------------------------------------------------------
+//  04. GENERAL LISTS
+// ------------------------------------------------------------------------
+
+ul
+	list-style: none !important
+	padding: 0px
+	margin: 0px
+
+
+// ------------------------------------------------------------------------
+//  05. LOGO
+// ------------------------------------------------------------------------
+
+#logo
+	background: url('../images/logo/logo.jpg') no-repeat
+	width: $logoWidth+px
+	height: $logoHeight+px
+	position: absolute
+	left: $logoLeft+px
+	top: $logoTop+px
+
+
+// ------------------------------------------------------------------------
+//  06. NAV
+// ------------------------------------------------------------------------
+
+nav
+	position: relative
+	float: right
+	padding: $generalPaddingNav
+	width: 100%
+	background: $bgNav
+	top: $topNav+px
+	ul
+		text-align: center
+
+	li
+		display: inline-block
+
+	a
+		color: $colorNav
+		font-size: $fontSizeNav+em
+		font-weight: $fontWeightNav
+		padding: $paddingNav
+
+		&:hover
+			color: $colorNavHover
+		&.active
+			color: $colorNavActive
+
+// ------------------------------------------------------------------------
+//  07. LANG
+// ------------------------------------------------------------------------
+
+#lang
+	position: absolute
+	top: $langTop+px
+	right: $langRight+px
+	ul
+		text-align: center
+
+	li
+		display: inline-block
+	a
+		color: $colorLang
+		padding: $paddingLang
+
+		&:hover
+			color: $colorLangHover
+		&.active
+			color: $colorLangActive
+
+// ------------------------------------------------------------------------
+//  08. SOCIAL
+// ------------------------------------------------------------------------
+
+#social
+	position: absolute
+	top: $socialTop+px
+	right: $socialRight+px
+	ul
+		text-align: center
+
+	li
+		display: inline-block
+		background: url("../images/icons/socialSprite.png") no-repeat
+		width: $withHeightSprite+px
+		height: $withHeightSprite+px
+		
+		// multiplicamos la posicion X por la anchura y altura definida
+
+		&.facebook
+			position: $withHeightSprite*0 $withHeightSprite*0
+		&.twitter
+			position: $withHeightSprite*1+px $withHeightSprite*0
+		&.dribble
+			position: $withHeightSprite*2+px $withHeightSprite*0
+		&.googleplus
+			position: $withHeightSprite*3+px $withHeightSprite*0
+
+	a
+		color: $colorSocial
+		padding: $paddingSocial
+
+		&:hover
+			color: $colorSocialHover
+		&.active
+			color: $colorSocialActive
+
+// ------------------------------------------------------------------------
+//  09. FOOTER
+// ------------------------------------------------------------------------
+
+footer
+	ul
+		text-align: center
+	li 
+		display: inline-block
+
+	a
+		color: $colorFooter
+		padding: $paddingFooter
+
+		&:hover
+			color: $colorFooterHover
+		&.active
+			color: $colorFooterActive
+
+// ------------------------------------------------------------------------
+//  10. INPUTS, TEXTAREA, ...
+// ------------------------------------------------------------------------
+
+label
+	font-size: $fontSizeLabels+em
+	font-weight: $fontWeightLabels
+	color: $labelsColors
+	clear: both
+
+input, textarea, select
+	font-size: $fontSizeInputs+em
+	font-weight: $fontWeightInputs
+	color: $imputsColors
+	border: $inputsborders
+	padding: $paddingInputs
+	margin: $marginInputs
+	border-radius: $bradiusInputs
+	font-family: $fontFamily
+	resize: none
+select
+	appearance: none !important
+	-webkit-appearance: none !important
+	-moz-appearance: none !important
+	background: #f5f5f5 url('../img/narrow.png') no-repeat 96% 50%
+	cursor: pointer
+
+/* Radio buttons & check buttons */
+
+input[type="radio"], input[type="checkbox"]
+	display: none
+
+input[type="radio"] + label span, input[type="checkbox"] + label span
+	position: relative
+	width: 20px
+	height: 20px
+	background: url('../images/icons/check.png') no-repeat 1px 0px
+	cursor: pointer
+	margin: -4px 10px 0 0 
+	top: 0px
+	float: left
+input[type="radio"]:checked + label span.checklist, input[type="checkbox"]:checked + label span.checklist
+	background: url('../images/icons/check.png') -22px 0px no-repeat !important
+
+// ------------------------------------------------------------------------
+//  11. TABLES
+// ------------------------------------------------------------------------
+
+table
+	border-collapse: collapse
+	width: 100%
+	background: #FFF
+	padding: 20px 
+th,td
+	border: $borderTable
+	padding: $paddingTable
+
+// ------------------------------------------------------------------------
+//  12. BUTTONS
+// ------------------------------------------------------------------------
+
+.btn
+	display: block
+	font-size: $fontSizeBtn+em
+	font-weight: $fontWeightBtn
+	padding: $paddingBtn
+	border-radius: $borderRadiusBtn
+	border: $borderBtn
+	cursor: pointer
+	text-align: center
+
+/* Sizes */
+
+.s
+	width: $btnVerySmall+px
+.sx
+	width: $btnSmall+px
+.med
+	width: $btnMedium+px	
+.l
+	width: $btnLarge+px
+.xl
+	width: $btnXl+px
+
+/* Types */
+
+.default
+	background: $defBgBtn
+	color: $defColorBtn
+	&:hover
+		background: $defBgBtnHover
+		color: $defColorBtnHover
+
+.secondary
+	background: $secBgBtn
+	color: $secColorBtn
+	&:hover
+		background: $secBgBtnHover
+		color: $secColorBtnHover
+.submit
+	background: $submitBgBtn
+	color: $submitColorBtn
+	&:hover
+		background: $submitBgBtnHover
+		color: $submitColorBtnHover
+.alert
+	background: $alertBgBtn
+	color: $alertColorBtn
+	&:hover
+		background: $alertBgBtnHover
+		color: $alertColorBtnHover
+.new
+	background: $newBgBtn
+	color: $newColorBtn
+	&:hover
+		background: $newBgBtnHover
+		color: $newColorBtnHover
+
+// ------------------------------------------------------------------------
+//  12. ROW AND BLOCKS
+// ------------------------------------------------------------------------
+
+.row
+	width: 100%
+	float: left
+.block1
+	width: 100%
+	float: left
+	background: $defBgBlock
+.block2
+	width: 100%
+	float: left
+	background: $secBgBlock
+.block3
+	width: 100%
+	float: left
+	background: $thrBgBlock
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,263 @@
+
+
+// file: params.sass
+// For: antai
+// version: v.1
+// Author: Pau Obrador
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,900italic,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900)
+
+// ------------------------------------------------------------------------
+// GENERAL
+// ------------------------------------------------------------------------
+
+/* General */
+
+$color: #62706c
+$secColor: #aaa
+
+$lineHeight: 1
+$fontSizeWeb: 1
+$fontSizePercent: 90%
+
+/* Header */
+
+$heightHeader: 200
+
+/* Text formats */
+
+$fontSizeP: 1.1
+$fontSizeEm: 1
+$fontSizeBq: 1
+
+/* Links */
+
+$fontSizeLinks: 1
+$colorLinks: #0084ff
+$colorLinksHover: #1690f4
+
+/* Fonts */
+
+$fontFamily: 'Roboto', serif
+$secFontFamily: 'Roboto', serif
+
+$fontH1Size: $fontSizeWeb * 2
+$fontH1Weight: 800
+$fontH1Margin: 0 0
+$fontH1Color: #232323
+$fontH1Align: center
+
+$fontH2Size: $fontSizeWeb * 2
+$fontH2Weight: 400
+$fontH2Margin: 0 0
+$fontH2Color: #62706c
+$fontH2Align: left
+
+$fontH3Size: $fontSizeWeb * 1.5
+$fontH3Weight: 600
+$fontH3Margin: 0 0
+$fontH3Color: #232323
+$fontH3Align: left
+
+$fontH4Size: $fontSizeWeb * 0.9
+$fontH4Weight: 600
+$fontH4Margin: 0 0
+$fontH4Color: #ccc
+$fontH4Align: left
+
+/* Blocks Backgrounds */
+
+$defBgBlock:#2cdda2
+$secBgBlock:#aaa
+$thrBgBlock:#62706c
+
+/* Footer */
+
+$footerBg: #232323
+$padFooter: 40px 30px
+
+
+
+// ------------------------------------------------------------------------
+// GRID
+// ------------------------------------------------------------------------
+
+$gridCols: 16
+$medianil: 15
+$gridWidth: 978
+
+@for $i from 1 through $gridCols/2
+	.col#{$i}
+		width: (($gridWidth/$gridCols)*$i)+px
+		padding: 0 $medianil+px
+		float: left
+
+$mainWidth: 400
+$asideWidth: 400
+
+// ------------------------------------------------------------------------
+// LOGO
+// ------------------------------------------------------------------------
+
+$logoWidth: 200
+$logoHeight: 150
+$logoLeft: 10
+$logoTop: 20
+
+// ------------------------------------------------------------------------
+// NAV
+// ------------------------------------------------------------------------
+
+$bgNav: #232323
+$generalPaddingNav: 20px 0
+$topNav: 100
+
+/* Nav ul li a */
+
+$colorNav: #FFF
+$colorNavHover: #DDD
+$colorNavActive: #F3f3f3
+
+$fontSizeNav: 1
+$fontWeightNav: 100
+$paddingNav: 0 20px
+
+// ------------------------------------------------------------------------
+// LANG
+// ------------------------------------------------------------------------
+
+$langTop: 120
+$langRight: 120
+
+/* Lang ul li a */
+
+$colorLang: #CCC
+$colorLangHover: #DDD
+$colorLangActive: #F3f3f3
+
+$paddingLang: 0 0
+
+
+// ------------------------------------------------------------------------
+// SOCIAL
+// ------------------------------------------------------------------------
+
+$socialTop: 120
+$socialRight: 120
+
+/* Lang ul li a */
+
+$colorSocial: #CCC
+$colorSocialHover: #DDD
+$colorSocialActive: #F3f3f3
+
+$paddingSocial: 0 0
+
+/* Sprites */
+
+$withHeightSprite: 30 // Definimos with y height del sprite
+
+// ------------------------------------------------------------------------
+// FOOTER
+// ------------------------------------------------------------------------
+
+/* Footer ul li a */
+
+$colorFooter: #CCC
+$colorFooterHover: #DDD
+$colorFooterActive: #F3f3f3
+
+$paddingFooter: 0 0
+
+
+// ------------------------------------------------------------------------
+// BOTONES
+// ------------------------------------------------------------------------
+ 
+$paddingBtn: 12px 50px
+$fontSizeBtn: 1.3
+$fontWeightBtn: 400
+$borderRadiusBtn: 3
+$borderBtn: none
+
+/* Medidas */
+
+$btnVerySmall: 30
+$btnSmall: 50
+$btnMedium: 80
+$btnLarge: 100
+$btnXl: 200
+
+/* Colores & backgrouns*/
+
+/* Default */
+
+$defColorBtn: #FFF
+$defBgBtn: #0084ff
+$defColorBtnHover: #FFF
+$defBgBtnHover: #1294ff
+
+/* Secondary btn */
+
+$secColorBtn: #232323
+$secBgBtn: #232323
+$secColorBtnHover: #232323
+$secBgBtnHover: #232323
+
+
+/* alert btn */
+
+$alertColorBtn: #FFF
+$alertBgBtn: #ed4040
+$alertColorBtnHover: #FFF
+$alertBgBtnHover: #fc5454
+
+/* Submit btn */
+
+$submitColorBtn: #FFF
+$submitBgBtn: #232323
+$submitColorBtnHover: #232323
+$submitBgBtnHover: #232323
+
+/* New btn */
+
+$newColorBtn: #232323
+$newBgBtn: #232323
+$newColorBtnHover: #232323
+$newBgBtnHover: #232323
+
+
+// ------------------------------------------------------------------------
+// INPUTS, LABELS, TEXTAREAS, RADIOBUTTONS ...
+// ------------------------------------------------------------------------
+
+/* Inputs */
+
+$fontSizeInputs: 1.3
+$fontWeightInputs: 400
+$imputsColors: #232323
+$placeholderColors: #ccc
+$inputsborders: solid 1px #ccc
+$marginInputs: 0 0 20px
+$paddingInputs: 15px
+$bradiusInputs: 2px
+
+/* Labels */
+
+$fontSizeLabels: 1
+$labelsColors: #232323
+$fontWeightLabels: 200
+
+
+// ------------------------------------------------------------------------
+// TABLES
+// ------------------------------------------------------------------------
+
+$borderTable: none
+$paddingTable: 10px
+
+
+
+
+
+

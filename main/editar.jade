@@ -1,0 +1,39 @@
+extends layout
+
+block content
+	section.cont
+		.capsula
+			h1 Modificando #{docs.titulo}
+
+			form(method='post', role='form', action='/' + docs.id)
+				input(name='_method', value='PUT', type='hidden')
+				ul
+					li
+						input(type='text', name='oferta[titulo]', placeholder='Titulo', value="#{docs.titulo}")
+					li
+						textarea(name='oferta[descripcion]', cols='30', rows='7', placeholder='Descripción') #{docs.descripcion}
+					li
+						select(name='oferta[categoria]', palceholder='categoria')
+							
+							- for (var x = 1; x < 4; x++)
+								- var option = docs.categoria
+								- var cat = 'categoria'+x
+								if cat == option
+									option(selected)= cat
+								else
+									option= cat
+							
+					li
+						input(type='text', name='oferta[fechaFin]', placeholder='Fecha finalización', value="#{moment(docs.fechaFin).format('MM-DD-YYYY')}", id="fechafin")
+					li
+						input(type='text', name='oferta[empresa]', placeholder='Nombre del proyecto/empresa', value="#{docs.empresa}")
+					li
+						textarea(name='oferta[direccion]', cols='30', rows='7', placeholder='Dirección') #{docs.direccion}
+					li
+						input(type='submit', class="btn default" ,value='Modificar')
+		script
+			$(function() {
+			$("#fechafin").datepicker();
+			});
+			
+		
